@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.gvozdeva_deushev.student_planner.data.Subject
-import com.gvozdeva_deushev.student_planner.data.sampleSubject
+import com.gvozdeva_deushev.student_planner.data.sampleSubjects
 
 @Composable
 fun SubjectCard(
@@ -118,7 +118,7 @@ fun HomeScreen (
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            items(sampleSubject) { subject ->
+            items(sampleSubjects) { subject ->
                 SubjectCard(
                     subject = subject,
                     onClick = { onSubjectClick(subject.id) }

@@ -9,7 +9,7 @@ data class Subject(
     val description: String
 )
 
-val sampleSubject = listOf(
+val sampleSubjects = listOf(
     Subject(
         id = "1",
         name = "Разработка мобильных приложений",
