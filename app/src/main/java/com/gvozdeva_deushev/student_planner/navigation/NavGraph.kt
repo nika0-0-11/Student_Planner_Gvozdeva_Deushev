@@ -31,6 +31,9 @@ fun StudentPlannerNavHost(
                 },
                 onSettingsClick = {
                     navController.navigate(Screen.Settings.route)
+                },
+                onScheduleClick = {
+                    navController.navigate(Screen.Schedule.route)
                 }
             )
         }
@@ -63,6 +66,34 @@ fun StudentPlannerNavHost(
 
         composable(route = Screen.Settings.route) {
             SettingsScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(route = Screen.Schedule.route) {
+            ScheduleScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                },
+                onLessonClick = { lessonId ->
+                    navController.navigate(Screen.LessonDetails.createdRoute(lessonId))
+                }
+            )
+        }
+
+        composable(
+            route = Screen.LessonDetails.route,
+            arguments = listOf(
+                navArgument("lessonId") {
+                    type = NavType.StringType
+                }
+            )
+        ) { backStackEntry ->
+            val lessonId = backStackEntry.arguments?.getString("lessonId") ?: ""
+            LessonDetailsScreen(
+                lessonId = lessonId,
                 onNavigateBack = {
                     navController.popBackStack()
                 }
