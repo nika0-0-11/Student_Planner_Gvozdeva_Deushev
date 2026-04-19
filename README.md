@@ -50,9 +50,9 @@
 
 ![Главный экран](app/img/step7_navigation_working_Gvozdeva_Deushev_1.png)
 
-![Расписание](app/img/scheduel_Gvozdeva_Deushev.png)
-
 ![Детали дисциплин](app/img/step7_navigation_working_Gvozdeva_Deushev_2.png)
+
+![Расписание_занятий](app/img/scheduel_Gvozdeva_Deushev.png)
 
 ![Профиль студента](app/img/step7_navigation_working_Gvozdeva_Deushev_3.png)
 
